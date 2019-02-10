@@ -1,0 +1,325 @@
+<div
+  style="box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.5);width:100%;background-color: cornflowerblue;height:100px;color: white;margin-top: -20px;font-family: Verdana, Geneva, Tahoma, sans-serif;font-size: 32px;top:0px;text-align: center;">
+  <div style="margin: 20px;padding-top:24px;"> POLICY SERVICE - QUOTE</div>
+</div>
+
+<body>
+  <div style=" background-color: white;margin-top:10px;"><img src="assets/Cognizant.png" style="width:200px"></div>
+  <div style="background-color: white;text-align: center;">
+    <button class="step" (click)="setPage(1)" [ngClass]="{'active-bg': currentPage=='1'}">1</button>
+    <button class="step" (click)="setPage(2)" [ngClass]="{'active-bg': currentPage=='2'}">2</button>
+    <button class="step" (click)="setPage(3)" [ngClass]="{'active-bg': currentPage=='3'}">3</button>
+    <button class="step" (click)="setPage(4)" [ngClass]="{'active-bg': currentPage=='4'}">4</button>
+  </div>
+  <div style="border-radius:5px;box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.5);">
+    <ng-container *ngIf="currentPage==1">
+      <p style="padding-top:20px;color: darkblue;">Select Product</p>
+      <table style="width:100%">
+        <tr style="width:50px">
+          <td style="width:33.33%">
+            Affinity:<br>
+            <select [(ngModel)]="dto.policyDetails.affinityId" [(ngModel)]="dto.policyDetails.policyDetails.affinityid"
+              style="width:100%">
+              <option value="1">1</option>
+            </select>
+          </td>
+          <td style="width:33.33%">
+            Product:<br>
+            <select [(ngModel)]="dto.policyDetails.productId" [(ngModel)]="dto.policyDetails.policyDetails.productID"
+              style="width:100%">
+              <option value="1">1</option>
+            </select>
+          </td>
+          <td style="width:33.33%">
+            Plan:<br>
+            <select [(ngModel)]="dto.policyDetails.planId" [(ngModel)]="dto.policyDetails.policyDetails.planId"
+              style="width:100%">
+              <option value="1">1</option>
+            </select>
+          </td>
+        </tr>
+        <tr style="width:50px">
+          <td style="width:33.33%">
+            Policy ID:<br>
+            <input type="text" [(ngModel)]="dto.policyDetails.policyId"
+              [(ngModel)]="dto.policyDetails.policyDetails.policyId" style="width:100%">
+          </td>
+        </tr>
+      </table>
+
+      <p style="color: darkblue;">Cover Period</p>
+      <table style="width:100%">
+        <tr style="width:50px">
+          <td style="width:33.33%">
+            Policy Start Date:<br>
+            <input [(ngModel)]="dto.policyDetails.policyStartDate"
+              [(ngModel)]="dto.policyDetails.policyDetails.policyStartDate" type="date">
+          </td>
+          <td style="width:33.33%">
+            Poliy Term:<br>
+            <select [(ngModel)]="dto.policyDetails.policyTerm" [(ngModel)]="dto.policyDetails.policyDetails.policyterm"
+              style="width:100%">
+              <option value="1">1 Year</option>
+              <option value="2">2 Years</option>
+              <option value="3">3 Years</option>
+            </select>
+
+          </td>
+          <td style="width:33.33%">
+            Policy End Date:<br>
+            <input [(ngModel)]="dto.policyDetails.policyEndDate"
+              [(ngModel)]="dto.policyDetails.policyDetails.policyEndDate" type="date">
+          </td>
+        </tr>
+      </table>
+    </ng-container>
+
+
+    <ng-container *ngIf="currentPage==2">
+      <p style="color: darkblue;">Communication Details:</p>
+      <table style="width:100%">
+        <tr style="width:50px">
+          <td style="width:33.33%">
+            Address 1:<br>
+            <input [(ngModel)]="dto.policyDetails.communicationDetails.address1" type="text" style="width:100%">
+          </td>
+          <td style="width:33.33%">
+            Address 2:<br>
+            <input [(ngModel)]="dto.policyDetails.communicationDetails.address2" type="text" style="width:100%">
+          </td>
+          <td style="width:33.33%">
+            Address 3:<br>
+            <input [(ngModel)]="dto.policyDetails.communicationDetails.address3" type="text" style="width:100%">
+          </td>
+        </tr>
+
+        <tr style="width:50px">
+          <td style="width:33.33%">
+            Pincode:<br>
+            <input [(ngModel)]="dto.policyDetails.communicationDetails.pincode" type="text" style="width:100%">
+          </td>
+          <td style="width:33.33%">
+            City:<br>
+            <input [(ngModel)]="dto.policyDetails.communicationDetails.city" type="text" style="width:100%">
+          </td>
+          <td style="width:33.33%">
+            State:<br>
+            <input [(ngModel)]="dto.policyDetails.communicationDetails.state" type="text" style="width:100%">
+          </td>
+        </tr>
+
+        <tr style="width:50px">
+          <td style="width:33.33%">
+            District:<br>
+            <input [(ngModel)]="dto.policyDetails.communicationDetails.district" type="text" style="width:100%">
+          </td>
+          <td style="width:33.33%">
+            Mobile:<br>
+            <input [(ngModel)]="dto.policyDetails.communicationDetails.mobile" type="text" style="width:100%">
+          </td>
+          <td style="width:33.33%">
+            e-Mail:<br>
+            <input [(ngModel)]="dto.policyDetails.communicationDetails.emailId" type="text" style="width:100%">
+          </td>
+        </tr>
+
+        <tr style="width:50px">
+          <td style="width:33.33%">
+            Telephone:<br>
+            <input [(ngModel)]="dto.policyDetails.communicationDetails.telephone" type="text" style="width:100%">
+          </td>
+          <td style="width:33.33%">
+            <span style="width:100%"></span>
+          </td>
+          <td style="width:33.33%">
+            <span style="width:100%"></span>
+          </td>
+        </tr>
+      </table>
+    </ng-container>
+
+    <ng-container *ngIf="currentPage==3">
+      <p style="color: darkblue;">Beneficiary Details</p>
+      <table style="width:100%">
+        <tr style="width:50px">
+          <td style="width:33.33%">
+            Name:<br>
+            <input [(ngModel)]="dto.policyDetails.beneficiaryList[0].name" type="text" style="width:100%">
+          </td>
+          <td style="width:33.33%">
+            Date Of Birth:<br>
+            <input [(ngModel)]=" dto.policyDetails.beneficiaryList[0].dob" type="date">
+          </td>
+          <td style="width:33.33%">
+            Gender:<br>
+            <select [(ngModel)]=" dto.policyDetails.beneficiaryList[0].gender" style="width:100%">
+              <option value="M">Male</option>
+              <option value="F">Female</option>
+            </select>
+          </td>
+        </tr>
+
+        <tr style="width:50px">
+          <td style="width:33.33%">
+            Nominee Name:<br>
+            <input [(ngModel)]=" dto.policyDetails.beneficiaryList[0].nomineeName" type="text" style="width:100%">
+          </td>
+          <td style="width:33.33%">
+            Nominee Type:<br>
+            <select [(ngModel)]=" dto.policyDetails.beneficiaryList[0].nomineeType" style="width:100%">
+              <option value="1">1</option>
+              <option value="2">1</option>
+            </select>
+          </td>
+          <td style="width:33.33%">
+            Nominee Relation:<br>
+            <select [(ngModel)]="dto.policyDetails.beneficiaryList[0].nomineeRelation" style="width:100%">
+              <option value="1">1</option>
+              <option value="2">1</option>
+            </select>
+          </td>
+        </tr>
+
+        <tr style="width:50px">
+          <td style="width:33.33%">
+            Proposer Relation:<br>
+            <select [(ngModel)]="dto.policyDetails.beneficiaryList[0].proposerRelation" style="width:100%">
+              <option value="1">1</option>
+              <option value="2">1</option>
+            </select>
+          </td>
+          <td style="width:33.33%">
+            <span style="width:100%"></span>
+          </td>
+          <td style="width:33.33%">
+            <span style="width:100%"></span>
+          </td>
+        </tr>
+
+      </table>
+    </ng-container>
+
+    <ng-container *ngIf="currentPage==4">
+      <p style="color: darkblue;">Other Details</p>
+      <table style="width:100%">
+        <tr style="width:50px">
+          <td style="width:33.33%">
+            Master Policy Number:<br>
+            <input [(ngModel)]="dto.policyDetails.masterpolicyno"
+              [(ngModel)]="dto.policyDetails.policyDetails.masterpolicyno" type="text" style="width:100%">
+          </td>
+          <td style="width:33.33%">
+            Last Updated Date:<br>
+            <input [(ngModel)]="dto.policyDetails.policyDetails.lastUpdatedDate" type="date">
+          </td>
+          <td style="width:33.33%">
+            Last Updated By:<br>
+            <select [(ngModel)]="dto.policyDetails.policyDetails.lastUpdatedBy" style="width:100%">
+              <option value="1">1</option>
+              <option value="2">2</option>
+            </select>
+          </td>
+        </tr>
+
+        <tr style="width:50px">
+          <td style="width:33.33%">
+            Employee Code:<br>
+            <input [(ngModel)]="dto.policyDetails.policyDetails.employeecode"
+              [(ngModel)]="dto.policyDetails.employeeCode" type="text" style="width:100%">
+          </td>
+          <td style="width:33.33%">
+            Customer ID:<br>
+            <input [(ngModel)]="dto.policyDetails.policyDetails.customerid" [(ngModel)]="dto.policyDetails.customerId"
+              type="text" style="width:100%">
+          </td>
+          <td style="width:33.33%">
+            Cover Note Number:<br>
+            <input [(ngModel)]="dto.policyDetails.policyDetails.covernoteno" type="text" style="width:100%">
+          </td>
+        </tr>
+
+        <tr style="width:50px">
+          <td style="width:33.33%">
+            Branch ID:<br>
+            <input [(ngModel)]="dto.policyDetails.policyDetails.branchId" [(ngModel)]="dto.policyDetails.branchId"
+              type="text" style="width:100%">
+          </td>
+          <td style="width:33.33%">
+            Payment Option:<br>
+            <select [(ngModel)]="dto.policyDetails.paymentOption" style="width:100%">
+              <option value="Card">Card</option>
+              <option value="Cash">Cash</option>
+            </select>
+          </td>
+          <td style="width:33.33%">
+            GST Number:<br>
+            <input [(ngModel)]="dto.policyDetails.gstNo" type="text" style="width:100%">
+          </td>
+        </tr>
+
+      </table>
+
+
+      <p style="color: darkblue;">Questions & Sum Insured:</p>
+      <table style="width:100%">
+        <tr style="width:50px">
+          <td style="width:33.33%">
+            Question ID:<br>
+            <select [(ngModel)]="dto.policyDetails.questionList[0].questionId" style="width:100%">
+              <option value="1">1</option>
+              <option value="2">2</option>
+            </select>
+          </td>
+          <td style="width:33.33%">
+            Answer ID:<br>
+            <select [(ngModel)]="dto.policyDetails.questionList[0].questionAns" style="width:100%">
+              <option value="true">True</option>
+              <option value="false">False</option>
+            </select>
+          </td>
+          <td style="width:33.33%">
+            Sum Insured:<br>
+            <input [(ngModel)]="dto.policyDetails.sumInsured" type="text" style="width:100%">
+          </td>
+        </tr>
+      </table>
+      <button class="submit-btn" style="width: 40%;margin-left:30%;margin-top:20px;height:40px;margin-bottom: 20px;"
+        (click)="submit()">Submit</button>
+    </ng-container>
+    <button *ngIf="currentPage!=4" class="submit-btn" style="width: 40%;margin-left:30%;margin-top:20px;height:40px;margin-bottom: 20px;"
+        (click)="setPage(currentPage+1)">Next</button>
+  </div>
+</body>
+
+<div
+  style="width:100%;background-color: darkblue;height:100px;color: white;margin-top: 20px;font-family: Verdana, Geneva, Tahoma, sans-serif;font-size: 16px;top:0px;text-align: center;padding-top:16px">
+  Copyright Cognizant & Liberty Mutual</div>
+
+<!-- <div style="position:fixed;height:50%;width:50%;left: 25%;bottom: 25%;z-index:1000;background-color:greenyellow;"></div> -->
+
+<div *ngIf="quoteFlag"
+  style="position:fixed;height:100%;width:100%;left: 0;bottom: 0;z-index:1000;background-color:black; opacity: 0.5;">
+
+</div>
+<div *ngIf="quoteFlag"
+  style="box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.5);position:fixed;height:50%;width:50%;left: 25%;bottom: 25%;z-index:1000;background-color:white; opacity: 1;">
+  <div style="text-align: center;font-size: 24px;color: green;margin: 10px; margin-top:30px;">Quotation Successul!</div>
+  <table style="width:60%;">
+    <tr>
+      <td>Policy Id</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>Affinity Id</td>
+      <td>{{modalData.afinityId}}</td>
+    </tr>
+    <tr>
+      <td>Policy Id</td>
+      <td>{{modalData.policyId}}</td>
+    </tr>
+    <tr>
+      <td>Plan Id</td>
+      <td>{{modalData.planId}}</td>
+    </tr>
+  </table>
+</div>

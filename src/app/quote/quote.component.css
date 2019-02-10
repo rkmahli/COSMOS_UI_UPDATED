@@ -1,0 +1,77 @@
+body{
+    min-width: 1000px;
+    width: 100%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+body div{
+    background-color: ghostwhite;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10px;
+}
+body div p{
+    font-size: 24px;
+    margin-left: 10px;
+    background-color: ghostwhite;
+}
+table tr td{
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+table tr td input{
+    height: 50px;
+}
+
+table tr td select{
+    height: 50px;
+}
+body div table{
+    border-bottom: solid 1px gray;
+    padding-bottom: 20px;
+}
+
+input{
+    margin-top:20px;
+}
+
+select{
+    margin-top:20px;
+}
+
+
+
+.submit-btn{            
+    color: white;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    background: blue;
+}
+
+.step {
+    border: none;
+    color: white;
+    padding: 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    border-radius: 50%;
+    margin-left: 60px;
+    margin-right: 60px;
+    font-size: 36px;
+    width: 90px;
+    outline:none;
+  }
+
+  .step:hover{
+      background-color: lightblue;
+      cursor: pointer;
+  }
+
+  .active-bg{
+    background-color: greenyellow;
+  }

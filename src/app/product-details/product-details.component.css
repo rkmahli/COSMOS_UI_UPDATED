@@ -1,0 +1,17 @@
+body{
+    min-width: 1000px;
+    width: 100%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+body div{
+    background-color: ghostwhite;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10px;
+}
+body div p{
+    font-size: 24px;
+    margin-left: 10px;
+    background-color: ghostwhite;
+}

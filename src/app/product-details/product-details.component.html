@@ -1,0 +1,96 @@
+<div
+    style="box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.5);width:100%;background-color: cornflowerblue;height:100px;color: white;margin-top: -20px;font-family: Verdana, Geneva, Tahoma, sans-serif;font-size: 32px;top:0px;text-align: center;">
+    <div style="margin: 20px;padding-top:24px;"> POLICY SERVICE - PRODUCT DETAILS</div>
+</div>
+
+<body>
+    <div style=" background-color: white;margin-top:10px;"><img src="assets/Cognizant.png" style="width:200px"></div>
+
+    <div>
+        <input type="text" placeholder="Product ID" [(ngModel)]="keyword">
+        <button (click)="getProductDetails()">Go</button>
+    </div>
+    <div>
+        Product Details:
+        <table>
+            <tr>
+                <td>Product ID</td>
+                <td>{{product.productid}}</td>
+            </tr>
+            <tr>
+                <td>Product Name</td>
+                <td>{{product.productname}}</td>
+            </tr>
+            <tr>
+                <td>Start Date</td>
+                <td>{{product.startdate}}</td>
+            </tr>
+            <tr>
+                <td>End Date</td>
+                <td>{{product.enddate}}</td>
+            </tr>
+            <tr>
+                <td>Effective Date</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>LOB ID</td>
+                <td>{{product.lobid}}</td>
+            </tr>
+            <tr>
+                <td>Short Product Name</td>
+                <td>{{product.shortProductname}}</td>
+            </tr>
+        </table>
+    </div>
+
+
+    <div>
+            Plan Details:
+            <table>
+                <tr>
+                    <td>Plan ID</td>
+                    <td>{{plan.planid}}</td>
+                </tr>
+                <tr>
+                    <td>Policy Type</td>
+                    <td>{{plan.policytype}}</td>
+                </tr>
+                <tr>
+                    <td>Gross Premium</td>
+                    <td>{{plan.planDetails[0].grosspremium}}</td>
+                </tr>
+                <tr>
+                    <td>Premium</td>
+                    <td>{{plan.planDetails[0].premium}}</td>
+                </tr>
+                <tr>
+                    <td>Sum Insured (Lakhs)</td>
+                    <td>{{plan.sumInsuredinLakhs[0].sumInsured}}</td>
+                </tr>
+            </table>
+        </div>
+
+        <div>
+                Product Questions:
+                <table>
+                    <tr>
+                        <td>Product ID</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Question ID</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Question</td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+</body>
+
+
+<div
+    style="width:100%;background-color: darkblue;height:100px;color: white;margin-top: 20px;font-family: Verdana, Geneva, Tahoma, sans-serif;font-size: 16px;top:0px;text-align: center;padding-top:16px">
+    Copyright Cognizant & Liberty Mutual</div>
